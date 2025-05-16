@@ -2,11 +2,11 @@ const { SelectablePage } = require("../pageObjects/SelectablePage");
 
 describe('demoqa scenarios', () => {
    beforeEach(() => {
-     cy.visit('https://demoqa.com/selectable');
+    cy.visit('https://demoqa.com/selectable');
  });
   it('grid scenario', () => {
     // a. Open https://demoqa.com/selectable
-    SelectablePageelectablePage.visit();
+    SelectablePageSelectablePage.visit();
 
     // b. Click “Grid”
     SelectablePage.gridButton.click();

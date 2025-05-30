@@ -1,15 +1,15 @@
-import { BasePage } from ".basePage";
+import { BasePage } from "./basePage";
 export class SelectablePage extends BasePage{
     static get url(){
-        return "/selectable/";
+        return "https://demoqa.com/selectable";
     }
 
-    static get gridButton() {
+    static gridButton() {
         return cy.get("a#demo-tab-grid");
     }
 
-    static get gridNumber() {
-        return cy.get("div#gridContainer");
+    static gridNumber(number) {
+        return cy.get("div#gridContainer").should("contain", number);
     }
 
     static checkIfHighlighted(number) {

@@ -1,13 +1,13 @@
-const { SelectablePage } = require("../pageObjects/selectablePage");
+import { SelectablePage } from "../pageObjects/selectablePage";
 
 describe('demoqa scenarios', () => {
-  // beforeEach(() => {
-  //   cy.visit('https://demoqa.com/selectable');
-  // });
+  beforeEach(() => {
+     cy.visit('https://demoqa.com/selectable');
+ });
 
    it('grid scenario', () => {
     SelectablePage.visit();
-    SelectablePage.gridButton.click();
+    SelectablePage.gridButton().click();
 
     // c. Click - “Two”, “Four”, “Six”, “Eight”
     SelectablePage.gridNumber("Two").click();
